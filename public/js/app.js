@@ -19607,14 +19607,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      url: ""
+      link: ""
     };
   },
   methods: {
     handleSubmit: function handleSubmit() {
-      console.log(this.url);
+      console.log(this.link);
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/create-short-link', {
-        url: this.url
+        link: this.link
       }).then(function (res) {
         console.log(res.data);
       })["catch"](function (err) {
@@ -19725,9 +19725,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, ["prevent"])),
     "class": "items-center justify-center"
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    name: "url",
+    name: "link",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-      return $data.url = $event;
+      return $data.link = $event;
     }),
     type: "text",
     id: "simple-search",
@@ -19736,7 +19736,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     required: ""
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.url]])]), _hoisted_6]), _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.url), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.link]])]), _hoisted_6]), _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.link), 1
   /* TEXT */
   )], 32
   /* HYDRATE_EVENTS */

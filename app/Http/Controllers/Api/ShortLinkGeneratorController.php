@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\ShortLinkFormRequest;
+use App\Models\Link;
 use Illuminate\Http\Request;
 
 class ShortLinkGeneratorController extends Controller
@@ -13,8 +15,10 @@ class ShortLinkGeneratorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request)
+    public function __invoke(ShortLinkFormRequest $request)
     {
-        return response()->json($request->all());
+        $response = Link::created($request->validated());
+
+        return response()->json($response);
     }
 }
